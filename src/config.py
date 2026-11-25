@@ -22,6 +22,14 @@ from pathlib import Path
 # Path.cwd() means scripts work no matter which directory you run them from.
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
+# Scripts (run_index.py etc.) don't go through api/main.py, so load .env here.
+# override=False: a real environment variable still wins over the file.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(PROJECT_ROOT / ".env")
+except ImportError:  # python-dotenv missing — fall back to the real environment
+    pass
+
 
 @dataclass
 class Config:
