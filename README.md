@@ -114,7 +114,7 @@ flowchart LR
 
 ## Quickstart
 
-The fastest path is Docker. You need **Docker Desktop**, **Ollama**, and a free
+The fastest path is Docker. You need **Docker Desktop**, **Ollama**, **pgAdmin** and a free
 **Qdrant Cloud** cluster.
 
 **1. Get the model**
